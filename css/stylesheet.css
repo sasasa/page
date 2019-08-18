@@ -1,0 +1,229 @@
+@charset "utf-8";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
+header {
+  background-color: #ccc;
+  color: #fff;
+  height: 90px;
+  background-image: url(../img/dot.png);
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  /* border: 2px solid #666; */
+  display: flex;
+  justify-content: space-between;
+}
+.brand {
+  color: #666;
+  font-size: 28px;
+  padding: 20px 40px;
+  /* float: left; */
+}
+/* メニュー */
+.menu {
+  margin: 20px;
+  /* border: 1px dotted #666; */
+  position: relative;
+  display: inline-block;
+  display: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: transparent;
+}
+.menu-line {
+  top: 13.6px;
+}
+.menu-inner::after,
+.menu-inner::before {
+  content: "";
+}
+.menu-line,
+.menu-inner::after,
+.menu-inner::before {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 5px;
+  border-radius: 2px;
+  transition: .15s ease-out;
+  background-color: #666;
+}
+.menu-inner::after {
+  top: 27.2px;
+}
+/* 真ん中の線のアニメーション */
+.open .menu .menu-line {
+  width: 0;
+  opacity: 0;
+  transform: translateX(20px) rotate(90deg);
+}
+/* 上の線のアニメーション */
+.open .menu .menu-inner::before {
+  width: 35.2px;
+  transform: translateY(13.6px) translateX(2.4px)
+    rotate(-135deg);
+}
+/* 下の線のアニメーション */
+.open .menu .menu-inner::after {
+  width: 35.2px;
+  transform: translateY(-13.6px) translateX(2.4px)
+    rotate(135deg);
+}
+.header-nav ul {
+  margin: 0;
+  display: flex;
+}
+.header-nav li {
+  /* float: left; */
+  padding: 23px 10px;
+}
+.header-nav a {
+  text-decoration: none;
+  display: block;
+  background-color: transparent;
+  color: #ccc;
+  padding: 5px 20px;
+  border-radius: 4px;
+  box-shadow: 0 3px #999;
+  user-select: none;
+}
+.header-nav a:hover {
+  background-color: rgba(204, 204, 204, .6);
+  color: #fff;
+}
+.header-nav a:active {
+  position: relative;
+  top: 3px;
+  box-shadow: none;
+}
+main {
+  padding-top: 80px;
+  /* margin-top: 80px; */
+  /* clear: both; */
+  text-align: center;
+}
+main h1 {
+  color: #666;
+  font-size: 36px;
+}
+main h2 {
+  color: #666;
+  font-size: 18px;
+}
+
+.effect-flash {
+  filter: brightness(1.0);
+  transition: filter 0.5s; /* イージングをおとなしくかける */
+}
+.effect-flash:hover {
+  filter: brightness(1.5); /* 明るくする */
+  transition: filter 0.4s cubic-bezier(0, 2.5, 0.2, 2.5); /* イージングを強烈にかける */
+}
+.effect-mono {
+  filter: grayscale(100); /* モノクロにする */
+  transition: filter 0.2s;
+}
+.effect-mono:hover {
+  filter: grayscale(0); /* モノクロを解除する */
+}
+.animals {
+  overflow: hidden;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #eee;
+}
+.animal {
+  float: left;
+  width:25%;
+  position: relative;
+}
+.txt h3 {
+  font-size: 18px;
+}
+.txt p {
+  font-size: 12px;
+}
+footer {
+  text-align: center;
+}
+@media (max-width: 1000px) {
+  .animal {
+    width: 50%;
+  }
+}
+@media (max-width: 810px) {
+  .menu {
+    display: inline-block;
+  }
+  .header-nav {
+    display: none;
+  }
+  .open .header-nav {
+    display: block;
+    position: absolute;
+    top: 90px;
+    right: 0;
+  }
+  .open .header-nav ul {
+    margin: 0;
+    flex-direction: column;
+  }
+  .open .header-nav li {
+    /* float: left; */
+    padding: 0;
+    margin: 0;
+  }
+  .open .header-nav a {
+    text-decoration: underline;
+    display: block;
+    background-color: white;
+    color: #ccc;
+    padding: 5px 20px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .open .header-nav a:active {
+    position: static;
+    box-shadow: none;
+  }
+}
+@media (min-width: 501px) and (max-width: 1279px) {
+  main h1 {
+    font-size: calc(18px + 18 * (100vw - 500px) / 780);
+  }
+  main h2 {
+    font-size: calc(12px + 6 * (100vw - 500px) / 780);
+  }
+  .txt h3 {
+    font-size: calc(14px + 4 * (100vw - 500px) / 780);
+  }
+  .txt p {
+    font-size: calc(10px + 2 * (100vw - 500px) / 780);
+  }
+}
+@media (max-width: 500px) {
+  main h1 {
+    font-size: 18px;
+  }
+  main h2 {
+    font-size: 12px;
+  }
+  .txt h3 {
+    font-size: 14px;
+  }
+  .txt p {
+    font-size: 10px;
+  }
+  .animal {
+    width: 100%;
+  }
+}

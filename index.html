@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ポートフォリオ</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        ポートフォリオ
+      </div>
+      <div class="menu">
+        <span class="menu-line"></span>
+        <span class="menu-inner"></span>
+      </div>
+      <nav  class="header-nav">
+        <ul>
+          <li><a target="_blank" href="https://www.google.com/webhp?hl=ja">Google</a></li>
+          <li><a href="">リンクその2</a></li>
+          <li><a href="">リンクその3</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1>佐伯昌昭</h1>
+        <h2>動物大百科？</h2>
+      </section>
+      <section>
+        <picture class="effect-flash">
+          <!-- 500以下になるとinuになる -->
+          <source media="(max-width:500px)"
+                  srcset="img/dog.jpg 500w"
+                  sizes="100vw">
+          <source srcset="img/cat.jpg 1280w"
+                  sizes="(max-width:1280px) 100vw, 1280px">
+          <img src="images/none.jpg">
+        </picture>
+      </section>
+      <section class="animals">
+        <div class="animal">
+          <img src="img/usa.jpg" alt="" class="effect-mono">
+          <div class="txt">
+            <h3>うさぎ</h3>
+            <p>逃げ足が速いよ動物です。</p>
+          </div>
+        </div>
+        <div class="animal">
+          <img src="img/usa.jpg" alt="" class="effect-mono">
+          <div class="txt">
+            <h3>うさぎ</h3>
+            <p>逃げ足が速いよ動物です。</p>
+          </div>
+        </div>
+        <div class="animal">
+          <img src="img/usa.jpg" alt="" class="effect-mono">
+          <div class="txt">
+            <h3>うさぎ</h3>
+            <p>逃げ足が速いよ動物です。</p>
+          </div>
+        </div>
+        <div class="animal">
+          <img src="img/usa.jpg" alt="" class="effect-mono">
+          <div class="txt">
+            <h3>うさぎ</h3>
+            <p>逃げ足が速いよ動物です。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>Copyright &copy; 2019 All Rights Reserved.</footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
