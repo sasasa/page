@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap サンプルサイト</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/boot_style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="bg-dark">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <a href="" class="navbar-brand">Logo</a>
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="menu" class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="" class="nav-link ">Home</a></li>
+              <li class="nav-item"><a href="" class="nav-link ">Link</a></li>
+              <li class="nav-item"><a href="" class="nav-link disabled">お問い合わせ</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+  <!-- 
+    576px   sm
+    768px   md
+    992px   lg
+    1200px  xl
+  -->
+  <!-- 
+    [p|m][location]-[size] 
+    location t,b,r,l, x, y
+    size 0 
+    1 0.25rem
+    2 0.5rem
+    3 1.0rem
+    4 1.5rem
+    5 3rem
+    auto
+  -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-9">
+          <main class="mt-4 p-5 rounded border shadow-sm">
+            <form action="" id="form1">
+              <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="label1" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="label1">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div id="m-body" class="modal-body">
+                      Modal body
+                    </div>
+                    <div class="modal-footer">
+                      <button id="m-close" type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Close</button>
+                      <button id="m-send" type="submit" class="btn btn-primary btn-lg">送信</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="text1">お名前</label>
+                <input type="text" id="text1" class="mb-5 form-control">
+              </div>
+              <div class="form-group">
+                  <label for="text2">メールアドレス</label>
+                  <input type="text" id="text2" class="mb-5 form-control">
+                </div>
+              <div class="form-group">
+                <label for="textarea1">お問い合わせ内容</label>
+                <textarea rows="5" id="textarea1" class="mb-5 form-control"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="custom-select-1b">お問い合わせ種別:</label>
+                <select id="custom-select-1b" class="mb-5 custom-select">
+                  <option>選択してください</option>
+                  <option>商品について</option>
+                  <option>サイトについて</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <div class="rounded border overflow-auto bg-light mb-5 " style="height:100px;">
+                  <p class="text-center lead">プライバシーポリシー</p>
+                  <h5>1.法令等の遵守</h5>
+                  <p>当社は、個人情報の取扱いについて、『個人情報の保護に関する法律』、『電気通信事業法』、その他個人情報保護関連法令及びガイドライン、またこのプライバシーポリシーを遵守します。</p>
+                  <h5>2.個人情報の定義</h5>
+                  <p>個人情報とは、生存する個人に関する情報であって、当該情報に含まれる氏名、生年月日、住所、電話番号、その他の記述等により特定の個人を識別することが出来るものを言います。これには他の情報と照合することが出来、それにより特定の個人を識別出来るものを含みます。</p>
+                </div>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="check1a">
+                <label class="form-check-label" for="check1a">プライバシーポリシーに同意する</label>
+              </div>
+              <div class="form-group">
+                <button id="submit" type="submit" class="btn btn-danger btn-lg mt-5">Submit</button>
+              </div>
+            </form>
+          </main>
+        </div>
+        <div class="col-lg-3 col-12">
+          <aside>
+            <div class="card shadow-sm mt-4">
+              <div class="card-header">事業所所在地</div>
+              <div class="card-body embed-responsive embed-responsive-1by1">
+                  <iframe  class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d830.8413244367446!2d130.39726275719025!3d33.59582514212693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541918cff4c1f73%3A0x67fc7a8e78c1369b!2z44CSODEwLTAwMDEg56aP5bKh55yM56aP5bKh5biC5Lit5aSu5Yy65aSp56We77yV5LiB55uu77yU4oiS77yR77yV!5e0!3m2!1sja!2sjp!4v1566039693159!5m2!1sja!2sjp" width="600" height="450" style="border:0" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="card shadow-sm mt-5">
+              <div class="card-header">ピックアップ</div>
+              <div class="card-columns mt-3 p-2">
+                <div class="card">
+                  <a href="">
+                    <img src="img/1.jpg" class="img-fluid img-thumbnail">
+                  </a>
+                </div>
+                <div class="card">
+                  <a href="">
+                    <img src="img/2.jpg" class="img-fluid img-thumbnail">
+                  </a>
+                </div>
+                <div class="card">
+                  <a href="">
+                    <img src="img/3.jpg" class="img-fluid img-thumbnail">
+                  </a>
+                </div>
+                <div class="card">
+                  <a href="">
+                    <img src="img/4.jpg" class="img-fluid img-thumbnail">
+                  </a>
+                </div>
+                <div class="card">
+                  <a href="">
+                    <img src="img/5.jpg" class="img-fluid img-thumbnail">
+                  </a>
+                </div>
+                <div class="card">
+                  <a href="">
+                    <img src="img/6.jpg" class="img-fluid img-thumbnail">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+    <footer class="">
+      <p class="mt-5 bg-secondary text-center text-light">
+        Copyright &copy; 2019 All Rights Reserved.
+      </p>
+    </footer>
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/boot_main.js"></script>
+  </body>
+</html>

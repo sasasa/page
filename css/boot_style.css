@@ -1,0 +1,21 @@
+.card-columns {
+  columns: 2;
+}
+footer p {
+  margin: 0;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 992px) {
+  .card-columns {
+    columns: 3;
+  }
+}
+@media (max-width: 576px) {
+  .card-columns {
+    columns: 2;
+  }
+}
